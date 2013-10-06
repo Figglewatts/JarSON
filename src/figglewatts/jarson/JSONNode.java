@@ -6,7 +6,16 @@ import java.util.Stack;
 import figglewatts.jarson.exceptions.JSONParseException;
 
 public class JSONNode {
-	private List<JSONNode> nodeList;
+	public void setNode(JSONNode node, int index) { }
+	public void setNode(JSONNode node, String key) { }
+	
+	public JSONNode getNode(int index) { return null; }
+	public JSONNode getNode(String key) { return null; }
+	
+	public void setValue(String value) { }
+	public String getValue() { return ""; }
+	
+	public int count() { return 0; }
 	
 	public void Add(String key, JSONNode item) { }
 	public void Add(JSONNode item) {

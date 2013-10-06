@@ -8,10 +8,10 @@ import figglewatts.jarson.exceptions.JSONParseException;
 
 public class JSONNode {
 	public void setNode(JSONNode node, int index) throws JSONAccessException { }
-	public void setNode(JSONNode node, String key) { }
+	public void setNode(JSONNode node, String key) throws JSONAccessException { }
 	
 	public JSONNode getNode(int index) throws JSONAccessException { return null; }
-	public JSONNode getNode(String key) { return null; }
+	public JSONNode getNode(String key) throws JSONAccessException { return null; }
 	
 	public void setValue(String value) { }
 	public String getValue() { return ""; }

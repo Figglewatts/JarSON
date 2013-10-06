@@ -11,7 +11,7 @@ public class JSONArray extends JSONNode {
 	@Override
 	public void setNode(JSONNode node, int index) throws JSONAccessException {
 		if (index < 0) {
-			throw new JSONAccessException("Tried to access a JSONNode that does not exist!");
+			throw new JSONAccessException("Tried to access a JSONNode that does not exist! (Index out of range)");
 		} else if (index >= nodeList.size()) {
 			nodeList.add(node);
 		} else {
@@ -26,12 +26,13 @@ public class JSONArray extends JSONNode {
 	@Override
 	public JSONNode getNode(int index) throws JSONAccessException {
 		if (index < 0 || index >= nodeList.size()) {
-			throw new JSONAccessException("Tried to access a JSONNode that does not exist!");
+			throw new JSONAccessException("Tried to access a JSONNode that does not exist! (Index out of range)");
 		} else {
 			return nodeList.get(index);
 		}
 	}
 	
+	@Override
 	public int size() {
 		return nodeList.size();
 	}

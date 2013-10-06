@@ -24,7 +24,11 @@ public class JSONNode {
 	public JSONNode Remove(JSONNode item) {
 		return item;
 	}
-	public String ToString() {
+	@Override
+	public String toString() {
+		return "JSONNode";
+	}
+	public String toString(String prefix) {
 		return "JSONNode";
 	}
 	
@@ -206,4 +210,7 @@ public class JSONNode {
 		}
 		return ctx;
 	}
+	
+	// TODO: add serialize() methods
+	// TODO: add deserialize() methods
 }

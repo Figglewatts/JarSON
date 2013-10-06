@@ -8,6 +8,7 @@ import figglewatts.jarson.exceptions.JSONAccessException;
 public class JSONArray extends JSONNode {
 	private List<JSONNode> nodeList = new ArrayList<JSONNode>();
 	
+	@Override
 	public void setNode(JSONNode node, int index) throws JSONAccessException {
 		if (index < 0) {
 			throw new JSONAccessException("Tried to access a JSONNode that does not exist!");
@@ -17,10 +18,12 @@ public class JSONArray extends JSONNode {
 			nodeList.set(index, node);
 		}
 	}
-	public void setNode(String key) {
+	@Override
+	public void setNode(JSONNode node, String key) {
 		nodeList.add(new JSONNode());
 	}
 	
+	@Override
 	public JSONNode getNode(int index) throws JSONAccessException {
 		if (index < 0 || index >= nodeList.size()) {
 			throw new JSONAccessException("Tried to access a JSONNode that does not exist!");

@@ -3,19 +3,20 @@ package figglewatts.jarson;
 import java.util.List;
 import java.util.Stack;
 
+import figglewatts.jarson.exceptions.JSONAccessException;
 import figglewatts.jarson.exceptions.JSONParseException;
 
 public class JSONNode {
-	public void setNode(JSONNode node, int index) { }
+	public void setNode(JSONNode node, int index) throws JSONAccessException { }
 	public void setNode(JSONNode node, String key) { }
 	
-	public JSONNode getNode(int index) { return null; }
+	public JSONNode getNode(int index) throws JSONAccessException { return null; }
 	public JSONNode getNode(String key) { return null; }
 	
 	public void setValue(String value) { }
 	public String getValue() { return ""; }
 	
-	public int count() { return 0; }
+	public int size() { return 0; }
 	
 	public void Add(String key, JSONNode item) { }
 	public void Add(JSONNode item) {

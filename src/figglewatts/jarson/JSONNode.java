@@ -111,7 +111,7 @@ public class JSONNode {
 					break;
 					
 				case '}' :
-				case ']' : // closing bracket... self explanatory
+				case ']' : // closing brackets... self explanatory
 					if (QuoteMode) {
 						token += JSONCharArray[i];
 						break;

@@ -42,6 +42,61 @@ public class JSONNode {
 		return "JSONNode";
 	}
 	
+	public int getAsInt(String s) {
+		try {
+			int v = Integer.parseInt(s);
+			return v;
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	public void setAsInt(int value) {
+		this.setValue(String.valueOf(value));
+	}
+	
+	public float getAsFloat(String s) {
+		try {
+			float v = Float.parseFloat(s);
+			return v;
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	public void setAsFloat(float value) {
+		this.setValue(String.valueOf(value));
+	}
+	
+	public double getAsDouble(String s) {
+		try {
+			double v = Double.parseDouble(s);
+			return v;
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	public void setAsDouble(double value) {
+		this.setValue(String.valueOf(value));
+	}
+	
+	public boolean getAsBoolean(String s) {
+		boolean v = Boolean.parseBoolean(s);
+		return v;
+	}
+	public void setAsBoolean(boolean value) {
+		this.setValue(String.valueOf(value));
+	}
+	
+	public JSONArray getAsArray() {
+		return (JSONArray)this;
+	}
+	
+	public JSONClass getAsObject() {
+		return (JSONClass)this;
+	}
+	
 	static String Escape(String text) {
 		String result = "";
 		for (char c : text.toCharArray())

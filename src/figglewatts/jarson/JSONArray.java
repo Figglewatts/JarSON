@@ -47,9 +47,7 @@ public class JSONArray extends JSONNode {
 		if (index < 0 || index >= nodeList.size()) {
 			return null;
 		} else {
-			JSONNode temp = nodeList.get(index);
-			nodeList.remove(index);
-			return temp;
+			return nodeList.remove(index);
 		}
 	}
 	@Override

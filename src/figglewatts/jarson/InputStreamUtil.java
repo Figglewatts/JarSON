@@ -7,10 +7,9 @@ import java.nio.ByteBuffer;
 public class InputStreamUtil {
 	private InputStreamUtil() { } // static constructor
 	
-	// these are zero-indexed
-	private final static int INT32_LENGTH = 3;
-	private final static int DOUBLE_LENGTH = 7;
-	private final static int FLOAT_LENGTH = 3;
+	private final static int INT32_LENGTH = 4;
+	private final static int DOUBLE_LENGTH = 8;
+	private final static int FLOAT_LENGTH = 4;
 	
 	public static int ReadInt32(FileInputStream in) throws IOException {
 		byte[] b = new byte[INT32_LENGTH]; // you know things are getting serious when you see byte[]
@@ -28,6 +27,15 @@ public class InputStreamUtil {
 		byte[] b = new byte[FLOAT_LENGTH];
 		in.read(b);
 		return ByteBuffer.wrap(b).getFloat();
+	}
+	
+	public static boolean ReadBoolean(FileInputStream in) throws IOException {
+		int bool = in.read();
+		if (bool == 1) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	public static String ReadString(FileInputStream in) throws IOException {

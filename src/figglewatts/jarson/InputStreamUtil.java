@@ -2,6 +2,7 @@ package figglewatts.jarson;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 
 public class InputStreamUtil {
 	private InputStreamUtil() { } // static constructor
@@ -9,10 +10,10 @@ public class InputStreamUtil {
 	// these are zero-indexed
 	private final static int INT32_LENGTH = 3;
 	
-	public static byte[] ReadInt32(FileInputStream in) throws IOException {
+	public static int ReadInt32(FileInputStream in) throws IOException {
 		byte[] b = new byte[INT32_LENGTH]; // you know things are getting serious when you see byte[]
 		in.read(b);
-		return b;
+		return ByteBuffer.wrap(b).getInt();
 	}
 	
 	public static String ReadString(FileInputStream in) throws IOException {

@@ -14,4 +14,13 @@ public class InputStreamUtil {
 		in.read(b);
 		return b;
 	}
+	
+	public static String ReadString(FileInputStream in) throws IOException {
+		StringBuilder builder = new StringBuilder();
+		int ch;
+		while ((ch = in.read()) != -1) {
+			builder.append((char)ch);
+		}
+		return builder.toString();
+	}
 }

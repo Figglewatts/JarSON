@@ -1,25 +1,42 @@
 package figglewatts.jarson;
 
 public enum JSONBinaryTag {
-	Array(1),
-	Class(2),
-	Value(3),
-	IntValue(4),
-	DoubleValue(5),
-	BoolValue(6),
-	FloatValue(7);
+	ARRAY(1),
+	CLASS(2),
+	VALUE(3),
+	INT_VALUE(4),
+	DOUBLE_VALUE(5),
+	BOOL_VALUE(6),
+	FLOAT_VALUE(7);
 	
-	private int value;
+	private final int index;
 	
-	public int getValue() {
-		return value;
+	JSONBinaryTag(int index) {
+		this.index = index;
 	}
-
-	public void setValue(int value) {
-		this.value = value;
+	
+	public int index() {
+		return index;
 	}
-
-	JSONBinaryTag(int value) {
-		this.setValue(value);
+	
+	public static JSONBinaryTag FromInt(int n) {
+		switch (n) {
+			case 1:
+				return ARRAY;
+			case 2:
+				return CLASS;
+			case 3:
+				return VALUE;
+			case 4:
+				return INT_VALUE;
+			case 5:
+				return DOUBLE_VALUE;
+			case 6:
+				return BOOL_VALUE;
+			case 7:
+				return FLOAT_VALUE;
+			default:
+				return null;
+		}
 	}
 }

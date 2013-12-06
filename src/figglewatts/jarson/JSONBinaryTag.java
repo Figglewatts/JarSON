@@ -19,6 +19,11 @@ public enum JSONBinaryTag {
 		return index;
 	}
 	
+	/**
+	 * Returns the appropriate tag based on the index in the enum.
+	 * @param n Index
+	 * @return The JSONBinaryTag at the index
+	 */
 	public static JSONBinaryTag FromInt(int n) {
 		switch (n) {
 			case 1:

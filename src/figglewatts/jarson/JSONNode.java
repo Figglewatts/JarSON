@@ -51,15 +51,7 @@ public abstract class JSONNode {
     }
     
     public double getAsDouble() {
-	double v = 0;
-	try {
-	    v = Double.parseDouble(this.getValue());
-	}
-	catch (NumberFormatException e) {
-	    System.err.println("Could not get as double!");
-	    e.printStackTrace(System.err);
-	}
-	return v;
+	return Double.parseDouble(this.getValue());
     }
     
     /**
@@ -69,7 +61,7 @@ public abstract class JSONNode {
      * to be converted to an int.
      */
     public int getAsInt() throws NumberFormatException {
-	return Integer.parseInt(this.getValue());
+	return (int)getAsDouble();
     }
     
     /**

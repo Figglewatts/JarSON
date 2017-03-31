@@ -102,7 +102,7 @@ public class JSONArray extends JSONNode implements Iterable<JSONNode> {
 	if (!(other instanceof JSONArray)) return false;
 	
 	JSONArray jsonArray = (JSONArray)other;
-	return Objects.equals(list, jsonArray.list);
+	return list.equals(jsonArray.list);
     }
 
     @Override

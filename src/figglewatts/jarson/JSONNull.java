@@ -16,7 +16,7 @@ public class JSONNull extends JSONNode {
      */
     @Override
     public String getValue() {
-	return null;
+	return "null";
     }
     
     /**
@@ -51,5 +51,10 @@ public class JSONNull extends JSONNode {
     @Override
     public boolean isNull() {
 	return true;
+    }
+    
+    @Override
+    public String toString() {
+	return "null";
     }
 }

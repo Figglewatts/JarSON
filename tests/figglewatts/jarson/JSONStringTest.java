@@ -1,4 +1,4 @@
-package figglewatts.jarson.test;
+package figglewatts.jarson;
 
 import figglewatts.jarson.JSONBool;
 import figglewatts.jarson.JSONNodeType;
@@ -38,18 +38,6 @@ public class JSONStringTest {
 	instance.setValue("testSetting");
 	String expResult = "testSetting";
 	String result = instance.getValue();
-	assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of getNodeType method, of class JSONString.
-     */
-    @Test
-    public void testGetNodeType() {
-	System.out.println("getNodeType");
-	JSONString instance = new JSONString("test");
-	JSONNodeType expResult = JSONNodeType.STRING;
-	JSONNodeType result = instance.getNodeType();
 	assertEquals(expResult, result);
     }
 

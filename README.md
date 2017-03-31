@@ -1,4 +1,4 @@
 JarSON
 ======
 
-A Java library for JSON serialization and deserialization
+A Java library for parsing JSON strings into a tree of nodes.

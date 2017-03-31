@@ -1,18 +1,29 @@
 package figglewatts.jarson;
 
-import java.util.Objects;
-
 /**
- *
+ * Provides a representation of a null JSON node.
+ * 
  * @author Sam Gibson
+ * 
+ * @version 1.0
+ * 
+ * @see JSONNode
  */
 public class JSONNull extends JSONNode {
 
+    /**
+     * @return {@code null}, as it represents a null value.
+     */
     @Override
     public String getValue() {
 	return null;
     }
-
+    
+    /**
+     * Doesn't set anything, as this is a null value. This method is retained
+     * for polymorphism with {@link JSONNode}.
+     * @param value Unused, but retained for polymorphism.
+     */
     @Override
     public final void setValue(String value) { }
 

@@ -1,32 +1,51 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package figglewatts.jarson;
 
 import java.util.Objects;
 
 /**
- *
+ * Provides a representation of a {@link JSONNode} which is a number.
+ * 
  * @author Sam Gibson
+ * 
+ * @version 1.0
+ * 
+ * @see JSONNode
  */
 public class JSONNumber extends JSONNode {
     private double data;
     
+    /**
+     * Instantiate this {@code JSONNumber} with a double value.
+     * @param data The double value for this node to contain.
+     */
     public JSONNumber(double data) {
 	this.data = data;
     }
     
+    /**
+     * Instantiate this {@code JSONNumber} with a {@link String} representation
+     * of a double.
+     * @param data The {@link String} representation of a double.
+     */
     public JSONNumber(String data) {
 	this.setValue(data);
     }
     
+    /**
+     * Get the value of this node's double value as a {@link String}.
+     * @return The {@link String} value of this node.
+     */
     @Override
     public String getValue() {
 	return Double.toString(data);
     }
 
+    /**
+     * Set this node's value to a {@link String} representation of a double.
+     * Will set the value to 0 and print an error to {@code System.err} if
+     * unable to convert value to double.
+     * @param value The {@link String} representation of the double.
+     */
     @Override
     public final void setValue(String value) {
 	double v = 0;

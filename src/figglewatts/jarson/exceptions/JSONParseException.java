@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package figglewatts.jarson.exceptions;
 
 /**
- *
+ * Provides an exception for errors in parsing JSON.
+ * 
  * @author Sam Gibson
+ * 
+ * @version 1.0
  */
 public class JSONParseException extends Exception {
 

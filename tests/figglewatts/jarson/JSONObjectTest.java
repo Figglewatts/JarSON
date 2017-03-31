@@ -1,6 +1,5 @@
 package figglewatts.jarson;
 
-import java.util.Iterator;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -1,8 +1,5 @@
 package figglewatts.jarson;
 
-import figglewatts.jarson.JSONBool;
-import figglewatts.jarson.JSONNodeType;
-import figglewatts.jarson.JSONString;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
